@@ -2,6 +2,7 @@ view: dau_wau_mau_explore_to_be_extended {}#dummy base view
 explore: dau_wau_mau_explore_to_be_extended {
   extension: required
   join: dau_wau_mau_support {
+    view_label: "Test Remote Update"
     type: cross
     relationship: one_to_many
     sql_where:${dau_wau_mau_support.date_to_use__input_field}<current_timestamp;; #assumes there's data up through yesterday only
