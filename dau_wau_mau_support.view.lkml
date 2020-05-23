@@ -3,7 +3,7 @@ explore: dau_wau_mau_explore_to_be_extended {
   query: mau_by_day {
     dimensions: [dau_wau_mau_support.date_used_date]
     measures: [dau_wau_mau_support.mau]
-    timezone: "America/Los_Angeles"
+    timezone: "query_timezone"
   }
 
   extension: required
