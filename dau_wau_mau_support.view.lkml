@@ -2,17 +2,17 @@ view: dau_wau_mau_explore_to_be_extended {}#dummy base view
 explore: dau_wau_mau_explore_to_be_extended {
   query: daily_active_users_by_day {
     description: "Load or Turtle with dimensions selected.  Do not use with other measures"
-    dimensions: [dau_wau_mau_support.date_used_date]
+    dimensions: [dau_wau_mau_support.period_end_date]
     measures: [dau_wau_mau_support.dau]
   }
   query: weeky_active_users_by_day {
     description: "Load or Turtle with dimensions selected.  Do not use with other measures"
-    dimensions: [dau_wau_mau_support.date_used_date]
+    dimensions: [dau_wau_mau_support.period_end_date]
     measures: [dau_wau_mau_support.wau]
   }
   query: monthly_active_users_by_day {
     description: "Load or Turtle with dimensions selected.  Do not use with other measures"
-    dimensions: [dau_wau_mau_support.date_used_date]
+    dimensions: [dau_wau_mau_support.period_end_date]
     measures: [dau_wau_mau_support.mau]
   }
 
