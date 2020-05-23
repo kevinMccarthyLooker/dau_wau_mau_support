@@ -1,1 +1,1 @@
-connection: "bigquery_publicdata_standard_sql"
+connection: "biquery_publicdata_standard_sql"
