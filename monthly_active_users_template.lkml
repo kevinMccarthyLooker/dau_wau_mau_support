@@ -89,7 +89,7 @@ view: monthly_active_users_config {
     drill_fields: [monthly_active_users_config.user_id__input_field,activation_event__input_date_field,one_day_added_for_timeline_end]
     link: {
       label: "Daily Timeline By User"
-      url: "{{_link}}{{drill_config_string._sql}}"
+      url: "{{monthly_active_users._link}}{{drill_config_string._sql}}"
     }
   }
 
