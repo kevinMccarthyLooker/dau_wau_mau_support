@@ -71,7 +71,7 @@ view: dau_wau_mau_support {
   dimension: date_to_use__input_field {sql:;;label:"Activity Date" hidden:yes}
 
   #the magic fields from this view
-  dimension: days_to_add {hidden:yes type:number}
+  dimension: days_to_add {hidden:yes type:number label:"Activity Days Prior To Period End Date"}
   dimension: period_end_date {
     hidden: yes
     type: date
