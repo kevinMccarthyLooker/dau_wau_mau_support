@@ -16,10 +16,11 @@ explore: dau_wau_mau_explore_to_be_extended {
     measures: [dau_wau_mau_support.mau]
   }
 
-  query: daily_and_monthly_active_users_by_day {
-    description: "Load or Turtle with dimensions selected.  Do not use with other measures"
+  query: active_user_count_shown_by_daily_active_users{
+    description: "Load or Turtle with dimensions selected.  Do not use with other measures.  Compare to row total, which is monthly active users for the period leading up to that day"
     dimensions: [dau_wau_mau_support.period_end_date]
-    measures: [dau_wau_mau_support.mau,dau_wau_mau_support.dau]
+    pivots: [dau_wau_mau_support.days_to_add]
+    measures: [dau_wau_mau_support.dau]
   }
 
   extension: required
