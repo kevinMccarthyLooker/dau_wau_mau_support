@@ -97,7 +97,9 @@ view: monthly_active_users_config {
   ##primarily for drill to viz suppport
   dimension: one_day_added_for_timeline_end {
     hidden: yes
+    convert_tz: no
     type: date
+    datatype: date
     sql: date_add(${activation_event__input_date_field}, INTERVAL 1 DAY) ;;
   }
   # dimension: one_hour_added_for_timeline_end {
