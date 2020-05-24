@@ -30,7 +30,7 @@ explore: dau_wau_mau_explore_to_be_extended {
   join: dau_wau_mau_support {
     type: cross
     relationship: one_to_many
-    sql_where:${dau_wau_mau_support.date_to_use__input_field}<current_timestamp;; #assumes there's data up through yesterday only
+    sql_where:${dau_wau_mau_support.date_to_use__input_field}<current_date;; #assumes there's data up through yesterday only
   }
 }
 
