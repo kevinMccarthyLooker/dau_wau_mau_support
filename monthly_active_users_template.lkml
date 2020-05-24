@@ -86,10 +86,10 @@ view: monthly_active_users_config {
     sql: ${user_id__input_field} ;;
     # filters: [appeared_within_thirty_days_leading_up_to_measurement_date: "Yes"]
     filters: [activation_event__criteria: "Yes"]
-    drill_fields: [monthly_active_users_config.user_id__input_field,activation_event__input_date_field,one_day_added_for_timeline_end]
+    # drill_fields: [monthly_active_users_config.user_id__input_field,activation_event__input_date_field,one_day_added_for_timeline_end]
     link: {
       label: "Daily Timeline By User"
-      url: "{{monthly_active_users._link}}{{drill_config_string._sql}}"
+      url: "{{monthly_active_users_drill_fields._link}}{{drill_config_string._sql}}"
     }
   }
 
@@ -107,6 +107,13 @@ view: monthly_active_users_config {
   #   type: date_hour
   #   sql: timestamp_add(${activation_event__input_date_field}, INTERVAL 1 HOUR) ;;
   # }
+  measure: monthly_active_users_drill_fields {
+    hidden: yes
+    type: count_distinct
+    sql: ${user_id__input_field} ;;
+    filters: [activation_event__criteria: "Yes"]
+    drill_fields: [monthly_active_users_config.user_id__input_field,activation_event__input_date_field,one_day_added_for_timeline_end]
+  }
   dimension: drill_config_string {
     hidden: yes
     sql:
