@@ -16,6 +16,12 @@ explore: dau_wau_mau_explore_to_be_extended {
     measures: [dau_wau_mau_support.mau]
   }
 
+  query: daily_and_monthly_active_users_by_day {
+    description: "Load or Turtle with dimensions selected.  Do not use with other measures"
+    dimensions: [dau_wau_mau_support.period_end_date]
+    measures: [dau_wau_mau_support.mau,dau_wau_mau_support.dau]
+  }
+
   extension: required
   join: dau_wau_mau_support {
     type: cross
