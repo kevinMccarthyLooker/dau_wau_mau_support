@@ -16,13 +16,15 @@ explore: dau_wau_mau_explore_to_be_extended {
     measures: [dau_wau_mau_support.mau]
   }
 
-  query: active_user_count_shown_by_daily_active_users{
-    description: "Load or Turtle with dimensions selected.  Do not use with other measures.  Compare to row total, which is monthly active users for the period leading up to that day"
-    dimensions: [dau_wau_mau_support.period_end_date,dau_wau_mau_support.days_to_add]
-    pivots: [dau_wau_mau_support.days_to_add]
-    measures: [dau_wau_mau_support.mau]
-    sorts: [dau_wau_mau_support.period_end_date: desc, dau_wau_mau_support.days_to_add: desc]
-  }
+#this query is cool but the pivot with 30 members just takes too long to render.
+#perhaps revisit this as weekly by day instead of monthly by day
+#   query: active_user_count_shown_by_daily_active_users{
+#     description: "Load or Turtle with dimensions selected.  Do not use with other measures.  Compare to row total, which is monthly active users, to the daily active users for each day that makes up the monthly period"
+#     dimensions: [dau_wau_mau_support.period_end_date,dau_wau_mau_support.days_to_add]
+#     pivots: [dau_wau_mau_support.days_to_add]
+#     measures: [dau_wau_mau_support.mau]
+#     sorts: [dau_wau_mau_support.period_end_date: desc, dau_wau_mau_support.days_to_add: desc]
+#   }
 
   extension: required
   join: dau_wau_mau_support {
