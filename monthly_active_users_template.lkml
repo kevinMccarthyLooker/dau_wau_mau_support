@@ -49,7 +49,7 @@ view: monthly_active_users_config {
   }
   #to be overridden
   dimension: user_id__input_field {sql:;;label:"User ID" hidden:yes type:number}
-  dimension: activation_event__input_date_field {type:date sql:;;label:"Activation Event Date" hidden:yes}
+  dimension: activation_event__input_date_field {type:date  sql:;;label:"Activation Event Date" hidden:yes datatype:date}
   #optional
   dimension: activation_event__criteria {sql:1=1;;label:"Activation Criteria Met" hidden:yes type:yesno}
 
