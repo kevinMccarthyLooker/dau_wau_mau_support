@@ -77,7 +77,7 @@ view: dau_wau_mau_support {
   dimension: period_end_date {
     hidden: yes
     type: date
-    sql: timestamp_add(${date_to_use__input_field}, INTERVAL ${days_to_add} DAY) ;;
+    sql: date_add(${date_to_use__input_field}, INTERVAL ${days_to_add} DAY) ;;
   }
 
   dimension: appeared_on_period_end_date {
