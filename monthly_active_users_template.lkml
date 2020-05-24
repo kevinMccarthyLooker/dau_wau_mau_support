@@ -58,6 +58,7 @@ view: monthly_active_users_config {
   dimension: monthly_active_users_measurement_date {
     hidden: yes
     type: date
+    datatype: date
     sql: date_add(${activation_event__input_date_field}, INTERVAL ${days_to_add} DAY) ;;
   }
 
