@@ -80,7 +80,7 @@ view: monthly_active_users_config {
     type: yesno
     sql: ${days_to_add}<30 ;;
   }
-  measure: mau {
+  measure: monthly_active_users {
     hidden: yes
     type: count_distinct
     sql: ${user_id__input_field} ;;
