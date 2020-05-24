@@ -57,6 +57,7 @@ view: monthly_active_users_config {
   dimension: days_to_add {hidden:yes type:number label:"Activity Days Prior To Period End Date"}
   dimension: monthly_active_users_measurement_date {
     hidden: yes
+    convert_tz: no
     type: date
     datatype: date
     sql: date_add(${activation_event__input_date_field}, INTERVAL ${days_to_add} DAY) ;;
