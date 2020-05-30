@@ -36,6 +36,7 @@ view: monthly_active_users_config {
     select 17 as days_to_add union all
     select 18 as days_to_add union all
     select 19 as days_to_add union all
+    select 20 as days_to_add union all
     select 21 as days_to_add union all
     select 22 as days_to_add union all
     select 23 as days_to_add union all
